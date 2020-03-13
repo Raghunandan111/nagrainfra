@@ -126,8 +126,3 @@ $(function() {
   });
 });
 
-/*When clicking on Full hide fail/success boxes */
-$('#contactForm').focus(function() {
-  $('#success').html('');
-});
-
