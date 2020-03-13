@@ -74,6 +74,43 @@ $(function() {
       return $(this).is(":visible");
     },
   });
+  
+  
+  
+      $("#bankingForm input").jqBootstrapValidation({
+    preventSubmit: true,
+    submitError: function($form, event, errors) {
+      // additional error messages or events
+    },
+    submitSuccess: function($form, event) {
+      event.preventDefault(); // prevent default submit behaviour
+      // get values from FORM
+      var bank = $("input#bankingID").val();
+      var phone = $("input#mobileID").val();
+
+      $this = $("#doBankingButton");
+      $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+	
+	            // Fail message
+          $('#banksuccess').html("<div class='alert alert-danger'>");
+          $('#banksuccess > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+            .append("</button>");
+          $('#banksuccess > .alert-danger').append($("<strong>").text("Sorry, no record exists in our database."));
+          $('#banksuccess > .alert-danger').append('</div>');
+          //clear all fields
+          $('#bankingForm').trigger("reset");
+		  
+		$this.prop("disabled", false);
+
+    },
+    filter: function() {
+      return $(this).is(":visible");
+    },
+  });
+  
+  
+  
+  
 
   $("a[data-toggle=\"tab\"]").click(function(e) {
     e.preventDefault();
@@ -84,4 +121,9 @@ $(function() {
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
   $('#success').html('');
+});
+
+/*When clicking on Full hide fail/success boxes */
+$('#bankingID').focus(function() {
+  $('#banksuccess').html('');
 });
