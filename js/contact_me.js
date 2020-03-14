@@ -99,7 +99,7 @@ $(function() {
           $('#banksuccess').html("<div class='alert alert-danger'>");
           /*$('#banksuccess > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");*/
-          $('#banksuccess > .alert-danger').append($("<strong>").text("Sorry, you have no deposits with us."));
+          $('#banksuccess > .alert-danger').append($("<strong>").text("Sorry, you have no deposit with us."));
           $('#banksuccess > .alert-danger').append('</div>');
           //clear all fields
           $('#bankingForm').trigger("reset");
