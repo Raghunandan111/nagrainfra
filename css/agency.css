@@ -598,7 +598,6 @@ section#contact .section-heading {
 
 section#contact .form-group {
   /*margin-bottom: 25px;*/
-  border-radius: .1rem;
 }
 
 section#contact .form-group input,
@@ -608,10 +607,12 @@ section#contact .form-group textarea {
 
 section#contact .form-group input.form-control {
   height: auto;
+  border-radius: .1rem;
 }
 
 section#contact .form-group textarea.form-control {
   height: 170px;
+  border-radius: .1rem;
 }
 
 section#contact .form-control:focus {
@@ -688,7 +689,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 section#banking .form-group {
   /*margin-bottom: 25px;*/
-  border-radius: .1rem;
 }
 
 section#banking .form-group input {
@@ -697,6 +697,7 @@ section#banking .form-group input {
 
 section#banking .form-group input.form-control {
   height: auto;
+  border-radius: .1rem;
 }
 
 section#banking .form-control:focus {
